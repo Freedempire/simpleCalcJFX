@@ -15,6 +15,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         scene.getStylesheets().add("com/freedempire/gui.css");
         primaryStage.setScene(scene);
+        primaryStage.resizableProperty().setValue(false); // disable window resizing
         primaryStage.show();
     }
 

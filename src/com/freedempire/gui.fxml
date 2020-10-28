@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="235.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.freedempire.Controller">
+<VBox maxHeight="300.0" maxWidth="235.0" minHeight="300.0" minWidth="235.0" prefHeight="300.0" prefWidth="235.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.freedempire.Controller">
    <children>
       <Label fx:id="labelDisplay" alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="235.0" text="0">
          <font>
