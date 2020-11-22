@@ -6,6 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * This is a simple calculator using JavaFX library.
+ * @version 1.0
+ * @author Freedempire
+ */
 public class Main extends Application {
 
     @Override

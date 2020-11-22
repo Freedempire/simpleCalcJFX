@@ -5,6 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+/**
+ * The JavaFX controller based on MVC design pattern.
+ */
 public class Controller {
     @FXML
     private Label labelDisplay;
@@ -16,6 +19,9 @@ public class Controller {
     private String mathematicalOperation;
     private boolean operatorProvided;
 
+    /**
+     * Initialize the calculator to the initial state.
+     */
     @FXML
     public void initialize() {
         digits = "0";
@@ -26,6 +32,10 @@ public class Controller {
         operatorProvided = false;
     }
 
+    /**
+     * Handler for all the digit buttons.
+     * @param actionEvent
+     */
     @FXML
     private void handlerDigitalAction(ActionEvent actionEvent) {
         String newDigit = ((Button) actionEvent.getSource()).getText();
@@ -40,6 +50,10 @@ public class Controller {
         operatorProvided = false;
     }
 
+    /**
+     * Handler for the point button.
+     * @param actionEvent
+     */
     @FXML
     private void handlerPointAction(ActionEvent actionEvent) {
         if (pointCount == 0) {
@@ -50,6 +64,10 @@ public class Controller {
         operatorProvided = false;
     }
 
+    /**
+     * Handler for buttons: "AC", "±", "%".
+     * @param actionEvent
+     */
     @FXML
     private void handlerGeneralAction(ActionEvent actionEvent) {
         String generalOperation = ((Button) actionEvent.getSource()).getText();
@@ -86,6 +104,10 @@ public class Controller {
         }
     }
 
+    /**
+     * Handler for mathematical operation buttons.
+     * @param actionEvent
+     */
     @FXML
     private void handlerMathematicalAction(ActionEvent actionEvent) {
         String newMathematicalOperation = ((Button) actionEvent.getSource()).getText();
@@ -105,6 +127,9 @@ public class Controller {
         pointCount = 0;
     }
 
+    /**
+     * Handler for the "equal" button.
+     */
     @FXML
     private void handlerEqualAction() {
         if (firstNum != null && mathematicalOperation != null) {
@@ -114,6 +139,9 @@ public class Controller {
         initialize();
     }
 
+    /**
+     * Execute the mathematical operation whenever it's possible.
+     */
     private void calculate() {
         if (secondNum == null) {
             secondNum = Double.parseDouble(digits);
